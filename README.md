@@ -1,64 +1,90 @@
-# Annoying Fake YouTube Volume Slider
+# BrickBall 2025
 
-This project is a playful web demo that simulates an annoying volume slider (like the one on YouTube) that jumps around and resets your volume randomly. It's built using HTML, CSS, and JavaScript.
+A classic arcade-style brick breaker game built with Python and Pygame. Smash bricks, collect powerups, and aim for a high score!
 
-## Features
+## How to Run
 
-- The volume slider moves to a random location when you try to interact with it.
-- Occasionally, the slider resets your volume and displays a playful alert.
-- Uses a screenshot as a background for a more realistic effect.
+### Requirements
 
-## Running the Project
+- Python 3.x
+- [Pygame](https://www.pygame.org/) library
+
+### Installation
 
 1. **Clone the Repository**
-   
+
    ```bash
-   git clone https://github.com/KholdHart/Code-Off-2025-Challenge-1.git
+   git clone https://github.com/KholdHart/Code-off-2025-Challenge-2.git
    ```
 
-2. **Navigate to the Project Directory**
-   
+2. **Install Pygame**
+
+   You can install pygame using pip:
+
    ```bash
-   cd Code-Off-2025-Challenge-1/Annoying\ Slider
+   pip install pygame
    ```
 
-3. **Open the Demo in Your Browser**
-   
-   Open the `index.html` file in your web browser (double-click or use a live server extension if using VSCode).
+3. **Navigate to the Game Directory**
 
-   Alternatively, on the command line:
    ```bash
-   open index.html          # macOS
-   xdg-open index.html      # Linux
-   start index.html         # Windows
+   cd Code-off-2025-Challenge-2/BrickBall2025
    ```
 
-## Project Structure
+### Running the Game
 
-```
-Annoying Slider/
-├── index.html      # Main HTML file
-├── main.js         # JavaScript for slider logic
-├── styles.css      # CSS styling
-├── Screenshot 2025-08-24 194221.png # Background image
+Launch the game from the command line:
+
+```bash
+python brickball.py
 ```
 
-## Requirements
+A window will open with the game. Use the left and right arrow keys to control the paddle at the bottom of the screen.
 
-- Modern web browser (Chrome, Firefox, Edge, etc.)
-- No additional dependencies required.
+## Gameplay
 
-## How It Works
+- **Objective:** Destroy all bricks by bouncing balls off your paddle.
+- **Lives:** You start with 9 lives. Lose a life when the ball falls below the paddle.
+- **Powerups:** Occasionally, breaking bricks spawns powerups:
+  - `life` — Gain an extra life
+  - `expand` — Make your paddle longer
+  - `shrink` — Make your paddle shorter
+  - `multi` — Adds an extra ball
+  - `slow` — Slows down ball speed
+- **High Score:** Your best score is saved between sessions in `high_score.txt`.
 
-- The slider (`input[type=range]`) listens for mouse enter and input events.
-- On mouse enter, it jumps to a random location inside the container.
-- On input, there’s a 30% chance it resets your volume and shows an alert.
+## Controls
 
-## Notes
+- **Left Arrow:** Move paddle left
+- **Right Arrow:** Move paddle right
+- **R:** Restart after game over or win
+- **Q:** Quit after game over or win
 
-- Make sure `Screenshot 2025-08-24 194221.png` is present in the same folder as `styles.css` for the background to display properly.
-- This is intended as a fun demo; it does not save or interact with real audio.
+## Using VS Code
+
+To edit and run the game in [Visual Studio Code](https://code.visualstudio.com/):
+
+1. **Open the Project Folder in VS Code**
+2. **Install the Python Extension:**
+   - Click on the Extensions icon (side bar) or press `Ctrl+Shift+X`
+   - Search for **"Python"** (by Microsoft)
+   - Click **Install**
+   - This enables Python syntax highlighting, linting, debugging, and running files directly.
+3. **Select Your Python Interpreter:**
+   - Press `Ctrl+Shift+P` and type `Python: Select Interpreter`
+   - Choose your installed Python version
+
+Now you can run and debug `brickball.py` directly from VS Code!
+
+## Files
+
+- `BrickBall2025/brickball.py` — Main game script
+- `high_score.txt` — Stores high scores (created automatically)
 
 ## License
 
 MIT (or specify your license here)
+
+---
+
+Enjoy the game and aim for the high score!
